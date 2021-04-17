@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>elvid&#39;s blog</title>
+  <title>NNextcloud环境搭建 | elvid&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -23,13 +23,26 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="elvid&#39;s blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="安装LAMP环境：安装需要的软件 1sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip  启动apache, maria">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NNextcloud环境搭建">
+<meta property="og:url" content="http://example.com/2021/04/17/Nextcloud/index.html">
 <meta property="og:site_name" content="elvid&#39;s blog">
+<meta property="og:description" content="安装LAMP环境：安装需要的软件 1sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip  启动apache, maria">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126175442990.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/xdebug1.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/xdebug2.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181125695.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181243883.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181425525.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126182239794.png">
+<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126182515061.png">
+<meta property="article:published_time" content="2021-04-17T13:40:21.278Z">
+<meta property="article:modified_time" content="2021-04-17T13:41:54.776Z">
 <meta property="article:author" content="Elvid Leung">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126175442990.png">
   
     <link rel="alternative" href="/atom.xml" title="elvid&#39;s blog" type="application/atom+xml">
   
@@ -165,16 +178,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Nextcloud" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Nextcloud" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/17/Nextcloud/">NNextcloud环境搭建</a>
+    <h1 class="article-title" itemprop="name">
+      NNextcloud环境搭建
     </h1>
   
 
@@ -282,6 +293,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -289,16 +321,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/17/Nextcloud/">阅读全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/17/Nextcloud/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo个人博客搭建教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -313,224 +404,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo个人博客搭建教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">Hexo个人博客搭建教程</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-04-17T13:39:53.660Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hexo个人博客搭建教程"><a href="#Hexo个人博客搭建教程" class="headerlink" title="Hexo个人博客搭建教程"></a>Hexo个人博客搭建教程</h1><h2 id="1、安装Node-js"><a href="#1、安装Node-js" class="headerlink" title="1、安装Node.js"></a>1、安装Node.js</h2><ol>
-<li><p>安装node.js </p>
-<p>这里选择LTS</p>
-<p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618629122346.png" alt="1618629122346"></p>
-<p>安装过程直接选下一步就好啦！</p>
-</li>
-<li><p>安装cnpm</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618630723673.png" alt="1618630723673"></p>
-<p>参考安装博客（说到了会遇到的一些恶bug）</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liaojie970/p/9296177.html">https://www.cnblogs.com/liaojie970/p/9296177.html</a></p>
-</li>
-<li><p>安装git</p>
-</li>
-<li><p>cnpm install -g hexo-cli</p>
-</li>
-</ol>
-<ol>
-<li>hexo -v</li>
-</ol>
-<h2 id="2、搭建博客"><a href="#2、搭建博客" class="headerlink" title="2、搭建博客"></a>2、搭建博客</h2><p>参考博客教程：</p>
-<ol>
-<li><p>新建一个文件夹  blog（博客搭建在这个文件夹里面）</p>
-</li>
-<li><p>生成博客</p>
-<ol>
-<li>sudo hexo init</li>
-</ol>
-</li>
-<li><p>启动博客</p>
-<ol>
-<li>hexo -s</li>
-</ol>
-</li>
-</ol>
-<h2 id="3、新建博客"><a href="#3、新建博客" class="headerlink" title="3、新建博客"></a>3、新建博客</h2><ol>
-<li>hexo n “博客文章名字”</li>
-<li>编写博 客</li>
-<li>编写完毕后回退blog目录，hexo clean，hexo g</li>
-<li>hexo -s(重新启动)</li>
-</ol>
-<h2 id="4、部署到Github上（免费）"><a href="#4、部署到Github上（免费）" class="headerlink" title="4、部署到Github上（免费）"></a>4、部署到Github上（免费）</h2><ol>
-<li><p>新建仓库</p>
-</li>
-<li><p>cnpm install –save hexo-deployer-git</p>
-</li>
-<li><p>设置   __config.yml里面的Deployment的相关配置</p>
-</li>
-</ol>
-<p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618627743805.png" alt="1618627743805"></p>
-<ol start="4">
-<li>hexo d 部署到远端</li>
-</ol>
-<h2 id="5、主题更换"><a href="#5、主题更换" class="headerlink" title="5、主题更换"></a>5、主题更换</h2><p><a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">https://github.com/litten/hexo-theme-yilia</a></p>
-<p> 安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
-<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes&#x2F;yilia</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>重新部署</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一些相关设置</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/aa104ffdf045?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/aa104ffdf045?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-<p>设置宠物</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43935907/article/details/90066053">https://blog.csdn.net/weixin_43935907/article/details/90066053</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85LAMP%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">安装LAMP环境：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Nextcloud"><span class="toc-number">2.</span> <span class="toc-text">安装Nextcloud</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#phpstorm%E5%92%8Cxdebug"><span class="toc-number">3.</span> <span class="toc-text">phpstorm和xdebug</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/17/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2021/04/17/hello-world/" class="archive-article-date">
-  	<time datetime="2021-04-17T03:55:30.941Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/17/hello-world/">阅读全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -553,8 +452,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
