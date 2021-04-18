@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>elvid&#39;s blog</title>
+  <title>elvid の blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -24,14 +24,14 @@
     }
   </style>
   <meta property="og:type" content="website">
-<meta property="og:title" content="elvid&#39;s blog">
+<meta property="og:title" content="elvid の blog">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="elvid&#39;s blog">
+<meta property="og:site_name" content="elvid の blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Elvid Leung">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="elvid&#39;s blog" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="elvid の blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -61,10 +61,11 @@
 			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/"  style="color: yellowgreen;">Elvid Leung</a></h1>
 		</hgroup>
 		
-
+		<p class="header-subtitle" style="color: darkorange;">诗与远方，均不如你</p>
+		
 		<nav class="header-menu">
 			<ul>
 			
@@ -73,6 +74,9 @@
 				<li><a href="/%E6%84%81%E4%B9%9F%E6%98%AF%E6%84%81%EF%BC%8C%E7%AC%91%E9%9D%9E%E6%98%AF%E7%AC%91">随笔</a></li>
 	        
 			</ul>
+		</nav>
+		<nav style="color: olive;">
+			总文章数 4
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -119,8 +123,10 @@
 				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">Elvid Leung</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>诗与远方，均不如你<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -192,93 +198,9 @@
 
 <p><strong>启动apache, mariadb服务：</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start apache2</span><br><span class="line"></span><br><span class="line">sudo systemctl start mariadb</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> apache2</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> mariadb</span><br></pre></td></tr></table></figure>
-
-<p><strong>配置数据库：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
-
-<p>配置mysql root用户密码 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -uroot -p</span><br></pre></td></tr></table></figure>
-
-<p>输入root密码</p>
-<p>创建数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE nextclouddb;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>创建用户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER nextclouduser@localhost IDENTIFIED BY &#39;nextcloudpwd&#39;;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>授权</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL ON nextclouddb.* TO nextclouduser@localhost;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>刷新权限和退出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
-
-<h1 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www</span><br></pre></td></tr></table></figure>
-
-<p>下载</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.nextcloud.com/server/releases/latest-20.tar.bz2</span><br></pre></td></tr></table></figure>
-
-<p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf latest-20.tar.bz2</span><br></pre></td></tr></table></figure>
-
-<p>更改拥有者</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R www-data:www-data nextcloud</span><br></pre></td></tr></table></figure>
-
-<p>创建个新文件（虚拟主机）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/sites-available/nextcloud.conf</span><br></pre></td></tr></table></figure>
-
-<p>添加下面的内容</p>
-<p>Alias /nextcloud “/var/www/nextcloud/“</p>
-<p>&lt;Directory /var/www/nextcloud/&gt;</p>
-<p>​    Options +FollowSymlinks</p>
-<p>​    AllowOverride All</p>
-<p>​    <IfModule mod_dav.c></p>
-<p>​       Dav off</p>
-<p>​    </IfModule></p>
-<p>​    SetEnv HOME /var/www/nextcloud</p>
-<p>​    SetEnv HTTP_HOME /var/www/nextcloud</p>
-</Directory>
-
-<p>启用虚拟主机</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite nextcloud.conf</span><br><span class="line"></span><br><span class="line">sudo systemctl restart apache2 </span><br></pre></td></tr></table></figure>
-
-<p>访问<a target="_blank" rel="noopener" href="http://localhost/nextcloud/">http://localhost/nextcloud/</a></p>
-<p>创建管理员和配置数据库信息</p>
-<p><img src="Nextcloud.assets/image-20201126175442990.png" alt="image-20201126175442990"></p>
-<p>完整视频链接：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wd6NvOFERJc">https://www.youtube.com/watch?v=wd6NvOFERJc</a></p>
-<h1 id="phpstorm和xdebug"><a href="#phpstorm和xdebug" class="headerlink" title="phpstorm和xdebug"></a>phpstorm和xdebug</h1><p><strong>安装phpstorm</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpstorm</span><br></pre></td></tr></table></figure>
-
-<p><strong>安装xdebug</strong></p>
-<p>打开终端，输入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -i</span><br></pre></td></tr></table></figure>
-
-<p>复制终端输出内容，访问<a target="_blank" rel="noopener" href="http://xdebug.org/wizard">http://xdebug.org/wizard</a></p>
-<p>粘贴进文本框</p>
-<p><img src="Nextcloud.assets/xdebug1.png"></p>
-<p>点击analyse my phpinfo() output，会给出指导，按指导来安装xdebug</p>
-<p><img src="Nextcloud.assets/xdebug2.png"></p>
-<p>安装完成，重启apache2服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service apache2 restfart</span><br></pre></td></tr></table></figure>
-
-
-
-<p>配置debug</p>
-<p>配置的php版本</p>
-<p><img src="Nextcloud.assets/image-20201126181125695.png" alt="image-20201126181125695"></p>
-<p><img src="Nextcloud.assets/image-20201126181243883.png" alt="image-20201126181243883"></p>
-<p>配置服务器</p>
-<p><img src="Nextcloud.assets/image-20201126181425525.png" alt="image-20201126181425525"></p>
-<p>配置debug选项</p>
-<p><img src="Nextcloud.assets/image-20201126182239794.png" alt="image-20201126182239794"></p>
-<p>然后打断点，点击<img src="Nextcloud.assets/image-20201126182515061.png" alt="image-20201126182515061">图标即可debug</p>
-<p>参考文章：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903683113615373">https://juejin.cn/post/6844903683113615373</a></p>
-
+        
+          <a class="article-more-a" href="/2021/04/17/Nextcloud/#more">more >></a>
+        
       
 
       
@@ -286,6 +208,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">NextCloud</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -340,81 +277,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Hexo个人博客搭建教程"><a href="#Hexo个人博客搭建教程" class="headerlink" title="Hexo个人博客搭建教程"></a>Hexo个人博客搭建教程</h1><h2 id="1、安装Node-js"><a href="#1、安装Node-js" class="headerlink" title="1、安装Node.js"></a>1、安装Node.js</h2><ol>
+        <h2 id="1、安装Node-js"><a href="#1、安装Node-js" class="headerlink" title="1、安装Node.js"></a>1、安装Node.js</h2><ol>
 <li><p>安装node.js </p>
 <p>这里选择LTS</p>
 <p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618629122346.png" alt="1618629122346"></p>
 <p>安装过程直接选下一步就好啦！</p>
 </li>
-<li><p>安装cnpm</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618630723673.png" alt="1618630723673"></p>
-<p>参考安装博客（说到了会遇到的一些恶bug）</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liaojie970/p/9296177.html">https://www.cnblogs.com/liaojie970/p/9296177.html</a></p>
-</li>
-<li><p>安装git</p>
-</li>
-<li><p>cnpm install -g hexo-cli</p>
-</li>
 </ol>
-<ol>
-<li>hexo -v</li>
-</ol>
-<h2 id="2、搭建博客"><a href="#2、搭建博客" class="headerlink" title="2、搭建博客"></a>2、搭建博客</h2><p>参考博客教程：</p>
-<ol>
-<li><p>新建一个文件夹  blog（博客搭建在这个文件夹里面）</p>
-</li>
-<li><p>生成博客</p>
-<ol>
-<li>sudo hexo init</li>
-</ol>
-</li>
-<li><p>启动博客</p>
-<ol>
-<li>hexo -s</li>
-</ol>
-</li>
-</ol>
-<h2 id="3、新建博客"><a href="#3、新建博客" class="headerlink" title="3、新建博客"></a>3、新建博客</h2><ol>
-<li>hexo n “博客文章名字”</li>
-<li>编写博 客</li>
-<li>编写完毕后回退blog目录，hexo clean，hexo g</li>
-<li>hexo -s(重新启动)</li>
-</ol>
-<h2 id="4、部署到Github上（免费）"><a href="#4、部署到Github上（免费）" class="headerlink" title="4、部署到Github上（免费）"></a>4、部署到Github上（免费）</h2><ol>
-<li><p>新建仓库</p>
-</li>
-<li><p>cnpm install –save hexo-deployer-git</p>
-</li>
-<li><p>设置   __config.yml里面的Deployment的相关配置</p>
-</li>
-</ol>
-<p><img src="C:\Users\elvid\AppData\Roaming\Typora\typora-user-images\1618627743805.png" alt="1618627743805"></p>
-<ol start="4">
-<li>hexo d 部署到远端</li>
-</ol>
-<h2 id="5、主题更换"><a href="#5、主题更换" class="headerlink" title="5、主题更换"></a>5、主题更换</h2><p><a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia">https://github.com/litten/hexo-theme-yilia</a></p>
-<p> 安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;litten&#x2F;hexo-theme-yilia.git themes&#x2F;yilia</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>修改hexo根目录下的 <code>_config.yml</code> ： <code>theme: yilia</code></p>
-<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd themes&#x2F;yilia</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>重新部署</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一些相关设置</p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/aa104ffdf045?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation">https://www.jianshu.com/p/aa104ffdf045?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=seo_notes&amp;utm_source=recommendation</a></p>
-<p>设置宠物</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43935907/article/details/90066053">https://blog.csdn.net/weixin_43935907/article/details/90066053</a></p>
-
+        
+          <a class="article-more-a" href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/#more">more >></a>
+        
       
 
       
@@ -422,6 +294,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -502,6 +385,84 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/17/hello-world/">阅读全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-daliy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/20/daliy/">case</a>
+    </h1>
+  
+
+        
+        <a href="/2016/10/20/daliy/" class="archive-article-date">
+  	<time datetime="2016-10-20T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>“我要回武汉！”<br>这句话说了一千遍，终于兑现成一张动车票。</p>
+<p>三年前，毕业的第二天，行李被盗，大学时所有的物件付之东流。<br>背着空空的行囊回家，越想越委屈，导演剧本不对啊，人家西游记八十一难，好歹是个HAPPY ENDING…<br>感觉自己有一种迷之体质，总可以把平静的生活过得波澜壮阔。<br>左脸黑线，右脸微笑，这种技能不是谁都可以，我在考虑要不申个遗。</p>
+<p>总之，国庆后大家都返工，过上岁月静好的生活时，我一个人扛起了到武汉搞事情的大旗。</p>
+        
+          <a class="article-more-a" href="/2016/10/20/daliy/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/10/20/daliy/">阅读全文 >></a>
         </p>
       
 
@@ -624,6 +585,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">NextCloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旧事</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -705,7 +678,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">愁也是愁，笑非是笑</div>
   	  	
     	</section>
     
@@ -779,5 +752,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"log":false});</script></body>
 </html>
