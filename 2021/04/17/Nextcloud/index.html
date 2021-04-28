@@ -31,21 +31,21 @@
 <meta property="og:site_name" content="elvid の blog">
 <meta property="og:description" content="安装LAMP环境：安装需要的软件 1sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip  启动apache, maria">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126175442990.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/xdebug1.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/xdebug2.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181125695.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181243883.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126181425525.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126182239794.png">
-<meta property="og:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126182515061.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126175442990.png">
+<meta property="og:image" content="http://example.com/.com//xdebug1.png">
+<meta property="og:image" content="http://example.com/.com//xdebug2.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181125695.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181243883.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181425525.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126182239794.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126182515061.png">
 <meta property="article:published_time" content="2021-04-17T13:40:21.278Z">
 <meta property="article:modified_time" content="2021-04-18T03:52:09.538Z">
 <meta property="article:author" content="Elvid Leung">
 <meta property="article:tag" content="教程">
 <meta property="article:tag" content="NextCloud">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/04/17/Nextcloud/Nextcloud.assets/image-20201126175442990.png">
+<meta name="twitter:image" content="http://example.com/.com//image-20201126175442990.png">
   
     <link rel="alternative" href="/atom.xml" title="elvid の blog" type="application/atom+xml">
   
@@ -95,7 +95,7 @@
 			</ul>
 		</nav>
 		<nav style="color: olive;">
-			总文章数 4
+			总文章数 5
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -263,19 +263,19 @@
 <p>&lt;Directory /var/www/nextcloud/&gt;</p>
 <p>​    Options +FollowSymlinks</p>
 <p>​    AllowOverride All</p>
-<p>​    <IfModule mod_dav.c></p>
+<p>​    <IfModule mod_dav.c></IfModule></p>
 <p>​       Dav off</p>
-<p>​    </IfModule></p>
+<p>​    </p>
 <p>​    SetEnv HOME /var/www/nextcloud</p>
 <p>​    SetEnv HTTP_HOME /var/www/nextcloud</p>
-</Directory>
+
 
 <p>启用虚拟主机</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite nextcloud.conf</span><br><span class="line"></span><br><span class="line">sudo systemctl restart apache2 </span><br></pre></td></tr></table></figure>
 
 <p>访问<a target="_blank" rel="noopener" href="http://localhost/nextcloud/">http://localhost/nextcloud/</a></p>
 <p>创建管理员和配置数据库信息</p>
-<p><img src="Nextcloud.assets/image-20201126175442990.png" alt="image-20201126175442990"></p>
+<p><img src="/.com//image-20201126175442990.png" alt="image-20201126175442990"></p>
 <p>完整视频链接：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wd6NvOFERJc">https://www.youtube.com/watch?v=wd6NvOFERJc</a></p>
 <h1 id="phpstorm和xdebug"><a href="#phpstorm和xdebug" class="headerlink" title="phpstorm和xdebug"></a>phpstorm和xdebug</h1><p><strong>安装phpstorm</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpstorm</span><br></pre></td></tr></table></figure>
@@ -286,9 +286,9 @@
 
 <p>复制终端输出内容，访问<a target="_blank" rel="noopener" href="http://xdebug.org/wizard">http://xdebug.org/wizard</a></p>
 <p>粘贴进文本框</p>
-<p><img src="Nextcloud.assets/xdebug1.png"></p>
+<p><img src="/.com//xdebug1.png"></p>
 <p>点击analyse my phpinfo() output，会给出指导，按指导来安装xdebug</p>
-<p><img src="Nextcloud.assets/xdebug2.png"></p>
+<p><img src="/.com//xdebug2.png"></p>
 <p>安装完成，重启apache2服务</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service apache2 restfart</span><br></pre></td></tr></table></figure>
 
@@ -296,13 +296,13 @@
 
 <p>配置debug</p>
 <p>配置的php版本</p>
-<p><img src="Nextcloud.assets/image-20201126181125695.png" alt="image-20201126181125695"></p>
-<p><img src="Nextcloud.assets/image-20201126181243883.png" alt="image-20201126181243883"></p>
+<p><img src="/.com//image-20201126181125695.png" alt="image-20201126181125695"></p>
+<p><img src="/.com//image-20201126181243883.png" alt="image-20201126181243883"></p>
 <p>配置服务器</p>
-<p><img src="Nextcloud.assets/image-20201126181425525.png" alt="image-20201126181425525"></p>
+<p><img src="/.com//image-20201126181425525.png" alt="image-20201126181425525"></p>
 <p>配置debug选项</p>
-<p><img src="Nextcloud.assets/image-20201126182239794.png" alt="image-20201126182239794"></p>
-<p>然后打断点，点击<img src="Nextcloud.assets/image-20201126182515061.png" alt="image-20201126182515061">图标即可debug</p>
+<p><img src="/.com//image-20201126182239794.png" alt="image-20201126182239794"></p>
+<p>然后打断点，点击<img src="/.com//image-20201126182515061.png" alt="image-20201126182515061">图标即可debug</p>
 <p>参考文章：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903683113615373">https://juejin.cn/post/6844903683113615373</a></p>
 
       
@@ -411,6 +411,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/04/28/SSMIntegration/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SSMIntegration
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
@@ -586,6 +595,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">教程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMVC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
