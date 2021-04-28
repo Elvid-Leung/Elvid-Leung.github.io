@@ -7,7 +7,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2016/10 | elvid の blog</title>
+  <title>Nextcloud环境搭建教程 | elvid の blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -24,13 +24,28 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="elvid の blog">
-<meta property="og:url" content="http://example.com/archives/2016/10/index.html">
+  <meta name="description" content="安装LAMP环境：安装需要的软件 1sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip  启动apache, maria">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nextcloud环境搭建教程">
+<meta property="og:url" content="http://example.com/2021/04/17/Nextcloud%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="elvid の blog">
+<meta property="og:description" content="安装LAMP环境：安装需要的软件 1sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip  启动apache, maria">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/.com//image-20201126175442990.png">
+<meta property="og:image" content="http://example.com/.com//xdebug1.png">
+<meta property="og:image" content="http://example.com/.com//xdebug2.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181125695.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181243883.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126181425525.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126182239794.png">
+<meta property="og:image" content="http://example.com/.com//image-20201126182515061.png">
+<meta property="article:published_time" content="2021-04-17T13:40:21.278Z">
+<meta property="article:modified_time" content="2021-04-28T03:57:55.713Z">
 <meta property="article:author" content="Elvid Leung">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="NextCloud">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/.com//image-20201126175442990.png">
   
     <link rel="alternative" href="/atom.xml" title="elvid の blog" type="application/atom+xml">
   
@@ -80,7 +95,7 @@
 			</ul>
 		</nav>
 		<nav style="color: olive;">
-			总文章数 5
+			总文章数 4
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -175,60 +190,316 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Nextcloud环境搭建教程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/10/20/daliy/" class="archive-article-date">
-  	<time datetime="2016-10-20T02:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-10-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/10/20/daliy/">case</a>
+    <h1 class="article-title" itemprop="name">
+      Nextcloud环境搭建教程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/04/17/Nextcloud%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2021-04-17T13:40:21.278Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装LAMP环境："><a href="#安装LAMP环境：" class="headerlink" title="安装LAMP环境："></a>安装LAMP环境：</h1><p><strong>安装需要的软件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y apache2 mariadb-server mariadb-client php libapache2-mod-php php-gd php-json php-mysql php-curl php-mbstring php-intl php-imagick php-xml php-zip</span><br></pre></td></tr></table></figure>
+
+<p><strong>启动apache, mariadb服务：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start apache2</span><br><span class="line"></span><br><span class="line">sudo systemctl start mariadb</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> apache2</span><br><span class="line"></span><br><span class="line">sudo systemctl <span class="built_in">enable</span> mariadb</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+
+<p><strong>配置数据库：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<p>配置mysql root用户密码 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<p>输入root密码</p>
+<p>创建数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE nextclouddb;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>创建用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER nextclouduser@localhost IDENTIFIED BY &#39;nextcloudpwd&#39;;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>授权</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL ON nextclouddb.* TO nextclouduser@localhost;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>刷新权限和退出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br><span class="line"></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www</span><br></pre></td></tr></table></figure>
+
+<p>下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.nextcloud.com/server/releases/latest-20.tar.bz2</span><br></pre></td></tr></table></figure>
+
+<p>解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf latest-20.tar.bz2</span><br></pre></td></tr></table></figure>
+
+<p>更改拥有者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R www-data:www-data nextcloud</span><br></pre></td></tr></table></figure>
+
+<p>创建个新文件（虚拟主机）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/sites-available/nextcloud.conf</span><br></pre></td></tr></table></figure>
+
+<p>添加下面的内容</p>
+<p>Alias /nextcloud “/var/www/nextcloud/“</p>
+<p>&lt;Directory /var/www/nextcloud/&gt;</p>
+<p>​    Options +FollowSymlinks</p>
+<p>​    AllowOverride All</p>
+<p>​    <IfModule mod_dav.c></IfModule></p>
+<p>​       Dav off</p>
+<p>​    </p>
+<p>​    SetEnv HOME /var/www/nextcloud</p>
+<p>​    SetEnv HTTP_HOME /var/www/nextcloud</p>
+
+
+<p>启用虚拟主机</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo a2ensite nextcloud.conf</span><br><span class="line"></span><br><span class="line">sudo systemctl restart apache2 </span><br></pre></td></tr></table></figure>
+
+<p>访问<a target="_blank" rel="noopener" href="http://localhost/nextcloud/">http://localhost/nextcloud/</a></p>
+<p>创建管理员和配置数据库信息</p>
+<p><img src="/.com//image-20201126175442990.png" alt="image-20201126175442990"></p>
+<p>完整视频链接：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=wd6NvOFERJc">https://www.youtube.com/watch?v=wd6NvOFERJc</a></p>
+<h1 id="phpstorm和xdebug"><a href="#phpstorm和xdebug" class="headerlink" title="phpstorm和xdebug"></a>phpstorm和xdebug</h1><p><strong>安装phpstorm</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install phpstorm</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装xdebug</strong></p>
+<p>打开终端，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -i</span><br></pre></td></tr></table></figure>
+
+<p>复制终端输出内容，访问<a target="_blank" rel="noopener" href="http://xdebug.org/wizard">http://xdebug.org/wizard</a></p>
+<p>粘贴进文本框</p>
+<p><img src="/.com//xdebug1.png"></p>
+<p>点击analyse my phpinfo() output，会给出指导，按指导来安装xdebug</p>
+<p><img src="/.com//xdebug2.png"></p>
+<p>安装完成，重启apache2服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service apache2 restfart</span><br></pre></td></tr></table></figure>
+
+
+
+<p>配置debug</p>
+<p>配置的php版本</p>
+<p><img src="/.com//image-20201126181125695.png" alt="image-20201126181125695"></p>
+<p><img src="/.com//image-20201126181243883.png" alt="image-20201126181243883"></p>
+<p>配置服务器</p>
+<p><img src="/.com//image-20201126181425525.png" alt="image-20201126181425525"></p>
+<p>配置debug选项</p>
+<p><img src="/.com//image-20201126182239794.png" alt="image-20201126182239794"></p>
+<p>然后打断点，点击<img src="/.com//image-20201126182515061.png" alt="image-20201126182515061">图标即可debug</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903683113615373">https://juejin.cn/post/6844903683113615373</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">NextCloud</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/04/17/Nextcloud%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/04/28/SSMIntegration/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SSMIntegration
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2021/04/17/Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo个人博客搭建教程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85LAMP%E7%8E%AF%E5%A2%83%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">安装LAMP环境：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Nextcloud"><span class="toc-number">2.</span> <span class="toc-text">安装Nextcloud</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#phpstorm%E5%92%8Cxdebug"><span class="toc-number">3.</span> <span class="toc-text">phpstorm和xdebug</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Nextcloud环境搭建教程" data-title="Nextcloud环境搭建教程" data-url="http://example.com/2021/04/17/Nextcloud%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="Nextcloud环境搭建教程" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -251,8 +522,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -340,10 +611,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">旧事</a>
               </li>
             
             <div class="clearfix"></div>
