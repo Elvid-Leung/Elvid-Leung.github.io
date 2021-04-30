@@ -31,16 +31,16 @@
 <meta property="og:site_name" content="elvid の blog">
 <meta property="og:description" content="1、题目给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。 为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。 说明：不允许修改给定的链表。题目链接">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png">
-<meta property="og:image" content="http://example.com/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg">
-<meta property="og:image" content="http://example.com/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg">
+<meta property="og:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png">
+<meta property="og:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg">
+<meta property="og:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg">
 <meta property="article:published_time" content="2021-04-30T01:54:32.000Z">
-<meta property="article:modified_time" content="2021-04-30T04:27:41.577Z">
+<meta property="article:modified_time" content="2021-04-30T06:21:47.024Z">
 <meta property="article:author" content="Elvid Leung">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png">
+<meta name="twitter:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png">
   
     <link rel="alternative" href="/atom.xml" title="elvid の blog" type="application/atom+xml">
   
@@ -211,7 +211,7 @@
 <span id="more"></span>
 
 <p><strong>实例1</strong></p>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png" alt="circularlinkedlist"></p>
+<p><img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png" alt="circularlinkedlist"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：返回索引为 1 的链表节点</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
 
 
@@ -226,7 +226,7 @@
 </li>
 </ul>
 <p>下面讨论存在环的情况：</p>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg" alt="picture1"></p>
+<p><img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg" alt="picture1"></p>
 <p>如上图，首次相遇，假设慢指针slow走了k步，那么快指针fast一定走了2k步；</p>
 <p>并且假定相遇时，fast已经在环里走了t圈（t&gt;=1）</p>
 <p>又假设相遇点距离环的起点距离为m，则易知：</p>
@@ -234,7 +234,7 @@
 <li> 环的起点距头结点 head 的距离为 k - m </li>
 <li>相遇点顺时针到环起点的距离为：k / t - m</li>
 </ul>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg" alt="picture2"></p>
+<p><img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg" alt="picture2"></p>
 <p>**从 head 前进 k - m 步能到达环起点。  从相遇点继续前进 k/t - m 步，也恰好到达环起点 **</p>
 <p>假设从head走到距离环节点<strong>k/t - m</strong>处，我们假设此处为Z点；我们看看会是什么个情况：</p>
 <p>此时头结点到Z点距离为：**(k-m) -  (k/t - m) = k - k/t 令其为h** </p>
