@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg">
 <meta property="og:image" content="http://example.com/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg">
 <meta property="article:published_time" content="2021-04-30T01:54:32.000Z">
-<meta property="article:modified_time" content="2021-04-30T06:21:47.024Z">
+<meta property="article:modified_time" content="2021-04-30T06:39:48.618Z">
 <meta property="article:author" content="Elvid Leung">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="算法">
@@ -226,7 +226,8 @@
 </li>
 </ul>
 <p>下面讨论存在环的情况：</p>
-<p><img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg" alt="picture1"></p>
+<img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg" alt="picture1" style="zoom:25%;">
+
 <p>如上图，首次相遇，假设慢指针slow走了k步，那么快指针fast一定走了2k步；</p>
 <p>并且假定相遇时，fast已经在环里走了t圈（t&gt;=1）</p>
 <p>又假设相遇点距离环的起点距离为m，则易知：</p>
@@ -234,7 +235,10 @@
 <li> 环的起点距头结点 head 的距离为 k - m </li>
 <li>相遇点顺时针到环起点的距离为：k / t - m</li>
 </ul>
-<p><img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg" alt="picture2"></p>
+<img src="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg" alt="picture2" style="zoom: 25%;">
+
+
+
 <p>**从 head 前进 k - m 步能到达环起点。  从相遇点继续前进 k/t - m 步，也恰好到达环起点 **</p>
 <p>假设从head走到距离环节点<strong>k/t - m</strong>处，我们假设此处为Z点；我们看看会是什么个情况：</p>
 <p>此时头结点到Z点距离为：**(k-m) -  (k/t - m) = k - k/t 令其为h** </p>
