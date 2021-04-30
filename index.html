@@ -200,44 +200,9 @@
         <h2 id="1、题目"><a href="#1、题目" class="headerlink" title="1、题目"></a>1、题目</h2><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p>
 <p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。注意，pos 仅仅是用于标识环的情况，并不会作为参数传递到函数中。</p>
 <p>说明：不允许修改给定的链表。<br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii">题目链接</a></p>
-<p><strong>实例1</strong></p>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/circularlinkedlist.png" alt="circularlinkedlist"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head &#x3D; [3,2,0,-4], pos &#x3D; 1</span><br><span class="line">输出：返回索引为 1 的链表节点</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="2、思路解释"><a href="#2、思路解释" class="headerlink" title="2、思路解释"></a>2、思路解释</h2><p> 这应该属于链表最基本的操作了 ：双指针！！！</p>
-<p>单链表的特点是每个节点只知道下一个节点，所以一个指针的话无法判断链表中是否含有环的。</p>
-<ul>
-<li><p>如果链表中不含环，那么这个指针最终会遇到空指针 null 表示链表到头了，可以判断该链表不含环；</p>
-</li>
-<li><p>但是如果链表中含有环，那么这个指针就会陷入死循环，因为环形数组中没有 null 指针作为尾部节点。 </p>
-<p> 经典解法：用双指针slow和fast，fast每次前进两步，slow每次前进一步。如果不含有环，fast最终会遇到 null，说明链表不含环；如果含有环，fast最终会超slow数圈，和slow相遇，说明链表含有环。 </p>
-</li>
-</ul>
-<p>下面讨论存在环的情况：</p>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture1.jpg" alt="picture1"></p>
-<p>如上图，首次相遇，假设慢指针slow走了k步，那么快指针fast一定走了2k步；</p>
-<p>并且假定相遇时，fast已经在环里走了t圈（t&gt;=1）</p>
-<p>又假设相遇点距离环的起点距离为m，则易知：</p>
-<ul>
-<li> 环的起点距头结点 head 的距离为 k - m </li>
-<li>相遇点顺时针到环起点的距离为：k / t - m</li>
-</ul>
-<p><img src="/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/picture2.jpg" alt="picture2"></p>
-<p>**从 head 前进 k - m 步能到达环起点。  从相遇点继续前进 k/t - m 步，也恰好到达环起点 **</p>
-<p>假设从head走到距离环节点<strong>k/t - m</strong>处，我们假设此处为Z点；我们看看会是什么个情况：</p>
-<p>此时头结点到Z点距离为：**(k-m) -  (k/t - m) = k - k/t 令其为h** </p>
-<p>也就是说如果slow从头结点出发，fast从相遇点出发，每次各走一步，等slow到达Z点的时候，fast在环内走了数圈刚刚好又回到了第一次相遇的地点，</p>
-<p><strong>那么只需要再走k/t-m步，则slow和fast会在环起点相遇</strong></p>
-<h2 id="3、代码实现"><a href="#3、代码实现" class="headerlink" title="3、代码实现"></a>3、代码实现</h2><p>有了上面解析过程，我们很容易写出代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">detectCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        ListNode slow = head, fast = head;</span><br><span class="line">        <span class="keyword">while</span> (fast != <span class="keyword">null</span> &amp;&amp; fast.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next.next;</span><br><span class="line">            <span class="keyword">if</span> (slow == fast) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (fast != slow) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        slow = head;</span><br><span class="line">        <span class="keyword">while</span> (slow != fast) &#123;</span><br><span class="line">            slow = slow.next;</span><br><span class="line">            fast = fast.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> slow;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
+        
+          <a class="article-more-a" href="/2021/04/30/leetcode-142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/#more">more >></a>
+        
       
 
       
